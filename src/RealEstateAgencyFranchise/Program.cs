@@ -10,9 +10,9 @@ namespace RealEstateAgencyFranchise
             Application.Current.Use(new HtmlFromJsonProvider());
             Application.Current.Use(new PartialToStandaloneHtmlProvider());
 
-            Handle.GET("/RealEstateFranchiseAgency", () =>
+            Handle.GET("/RealEstateAgencyFranchise", () =>
             {
-                var corporation = Db.SQL<Corporation>("select c from Corporation").First;
+                var corporation = Db.SQL<Corporation>("select c from Corporation c").First;
 
                 var json = new CorporationJson
                 {
