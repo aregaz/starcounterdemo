@@ -62,6 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgencyOfficeJson.json.cs">
+      <DependentUpon>AgencyOfficeJson.json</DependentUpon>
+    </Compile>
     <Compile Include="CorporationJson.json.cs">
       <DependentUpon>CorporationJson.json</DependentUpon>
     </Compile>
@@ -80,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="wwwroot\RealEstateAgencyFranchise\CorporationJson.html" />
+    <None Include="wwwroot\RealEstateAgencyFranchise\AgencyOffice.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypedJSON Include="AgencyOfficeJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(StarcounterBin)\Starcounter.MsBuild.targets" />

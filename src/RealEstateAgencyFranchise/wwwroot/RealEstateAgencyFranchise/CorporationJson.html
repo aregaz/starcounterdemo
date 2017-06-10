@@ -5,6 +5,12 @@
         <p>
             <h2>Real Estate Agency Franchise</h2>
         </p>
-        <h3>{{model.Name}}</h3>
+        <p>
+            <h3>{{model.Name$}}</h3>
+            <template is="dom-repeat" items="{{model.Offices}}">
+                <starcounter-include partial="{{item}}"></starcounter-include>
+            </template>
+            <button value="{{model.NewOfficeTrigger$::click}}" onmousedown="++this.value">Add new office</button>
+        </p>
     </template>
 </template>
