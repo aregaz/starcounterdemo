@@ -1,7 +1,7 @@
 ﻿using Starcounter;
-using RealEstateFranchiseAgency.Database;
+using RealEstateAgencyFranchise.Database;
 
-namespace RealEstateFranchiseAgency
+namespace RealEstateAgencyFranchise
 {
     public class Program
     {

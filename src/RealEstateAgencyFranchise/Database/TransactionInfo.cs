@@ -1,7 +1,7 @@
 ﻿using Starcounter;
 using System;
 
-namespace RealEstateFranchiseAgency.Database
+namespace RealEstateAgencyFranchise.Database
 {
     [Database]
     public class TransactionInfo

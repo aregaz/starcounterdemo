@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RealEstateFranchiseAgency.Database
+namespace RealEstateAgencyFranchise.Database
 {
     [Database]
     public class Corporation

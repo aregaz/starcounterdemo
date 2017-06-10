@@ -1,6 +1,6 @@
 using Starcounter;
 
-namespace RealEstateFranchiseAgency
+namespace RealEstateAgencyFranchise
 {
     partial class CorporationJson : Json
     {

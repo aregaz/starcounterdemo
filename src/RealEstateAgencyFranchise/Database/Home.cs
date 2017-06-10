@@ -1,6 +1,6 @@
 ﻿using Starcounter;
 
-namespace RealEstateFranchiseAgency.Database
+namespace RealEstateAgencyFranchise.Database
 {
     [Database]
     public class Home
