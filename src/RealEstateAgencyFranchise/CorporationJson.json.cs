@@ -24,6 +24,8 @@ namespace RealEstateAgencyFranchise
                 Trend = 0,
                 Name = this.NewOfficeName
             };
+
+            this.NewOfficeName = "";
         }
     }
 }
