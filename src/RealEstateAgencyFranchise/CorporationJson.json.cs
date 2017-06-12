@@ -1,3 +1,4 @@
+using RealEstateAgencyFranchise.Database;
 using Starcounter;
 
 namespace RealEstateAgencyFranchise
@@ -12,6 +13,17 @@ namespace RealEstateAgencyFranchise
         void Handle(Input.SaveTrigger action)
         {
             Transaction.Commit();
+        }
+
+        void Handle(Input.NewOfficeTrigger action)
+        {
+            new Office()
+            {
+                Corporation = this.Data as Corporation,
+                Address = new Address(),
+                Trend = 0,
+                Name = this.NewOfficeName
+            };
         }
     }
 }

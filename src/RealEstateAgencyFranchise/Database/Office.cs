@@ -15,16 +15,16 @@ namespace RealEstateAgencyFranchise.Database
 
         public List<Home> SoldHomes =>
             Db.SQL<Home>(
-                "select h from Home h where h.AgencyOffice = ?",
+                "SELECT h FROM Home h WHERE h.AgencyOffice = ?",
                 this)
             .ToList();
 
         public long SoldHomesCount =>
-            //Db.SQL<long>(
-            //    "SELECT COUNT(*) FROM Home h WHERE h.AgencyOffice = ?",
-            //    this)
-            //.First; // why does not work?
-            SoldHomes.Count;
+            Db.SQL<long>(
+                "SELECT COUNT(h) FROM Home h WHERE h.AgencyOffice = ?",
+                this)
+            .First; // why does not work?
+                    //SoldHomes.Count;
 
         public double TotalComission =>
             Db.SQL<double>(
@@ -33,9 +33,12 @@ namespace RealEstateAgencyFranchise.Database
                 "JOIN TransactionInfo t ON h.Transaction = t " +
                 "WHERE h.AgencyOffice = ?",
                 this)
-            .First;
+            .FirstOrDefault();
 
-        public double AverageComission => TotalComission / AverageComission;
+        public double AverageCommission =>
+            SoldHomesCount == 0
+                ? 0
+                : TotalComission / SoldHomesCount;
 
         public double Trend { get; set; }
     }

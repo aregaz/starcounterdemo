@@ -7,7 +7,7 @@
             <h2>Real Estate Agency Franchise</h2>
         </p>
         <p>
-            <h3 class="CorporationName">{{model.Name$}}</h3>
+            <h3 class="CorporationName">{{model.Name}}</h3>
 
             <table class="offices">
                 <tr>
@@ -24,6 +24,7 @@
                     </tr>
                 </template>
             </table>
+            <input value="{{model.NewOfficeName$::input}}"/>
             <button value="{{model.NewOfficeTrigger$::click}}" onmousedown="++this.value">Add new office</button>
         </p>
     </template>

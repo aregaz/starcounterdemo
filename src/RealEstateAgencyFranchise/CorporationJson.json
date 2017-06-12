@@ -1,7 +1,10 @@
 {
   "Html": "/RealEstateAgencyFranchise/CorporationJson.html",
-  "Name$": "",
+  "Name": "",
   "Offices": [ {} ],
+
   "SaveTrigger$": 0,
-  "NewOfficeTrigger$":  0
+
+  "NewOfficeTrigger$": 0,
+  "NewOfficeName$": ""
 }

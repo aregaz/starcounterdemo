@@ -84,7 +84,7 @@
   <ItemGroup>
     <Content Include="wwwroot\RealEstateAgencyFranchise\CorporationJson.html" />
     <Content Include="wwwroot\Content\styles.css" />
-    <None Include="wwwroot\RealEstateAgencyFranchise\AgencyOffice.html" />
+    <None Include="wwwroot\RealEstateAgencyFranchise\AgencyOfficeJson.html" />
   </ItemGroup>
   <ItemGroup>
     <TypedJSON Include="AgencyOfficeJson.json">
