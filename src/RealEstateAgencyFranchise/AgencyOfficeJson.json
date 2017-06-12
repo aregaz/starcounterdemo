@@ -1,4 +1,9 @@
 {
   "Html": "/RealEstateAgencyFranchise/AgencyOffice.html",
-  "Name$": ""
+  "Name$": "",
+  "SoldHomes": [{}],
+  "SoldHomesCount": 0.0,
+  "TotalComission": 0.0,
+  "AverageComission": 0.0,
+  "Trend": 0
 }

@@ -7,9 +7,22 @@
         </p>
         <p>
             <h3>{{model.Name$}}</h3>
-            <template is="dom-repeat" items="{{model.Offices}}">
-                <starcounter-include partial="{{item}}"></starcounter-include>
-            </template>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Number of homes sold</th>
+                    <th>Total comission</th>
+                    <th>Average comission</th>
+                    <th>Trend</th>
+                </tr>
+
+                <template is="dom-repeat" items="{{model.Offices}}">
+                    <tr>
+                        <starcounter-include partial="{{item}}"></starcounter-include>
+                    </tr>
+                </template>
+            </table>
             <button value="{{model.NewOfficeTrigger$::click}}" onmousedown="++this.value">Add new office</button>
         </p>
     </template>

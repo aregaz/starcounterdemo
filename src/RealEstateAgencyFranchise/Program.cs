@@ -1,6 +1,8 @@
 ﻿using Starcounter;
 using RealEstateAgencyFranchise.Database;
 using System.Linq;
+using System.Collections.Generic;
+using System;
 
 namespace RealEstateAgencyFranchise
 {
@@ -25,7 +27,7 @@ namespace RealEstateAgencyFranchise
                             Name = "REA Corporation #1"
                         };
 
-                        new Office()
+                        var office1 = new Office()
                         {
                             Corporation = corporation,
                             Name = "REA #1 - Office 1",
@@ -39,7 +41,44 @@ namespace RealEstateAgencyFranchise
                             }
                         };
 
-                        new Office()
+                        new Home()
+                        {
+                            AgencyOffice = office1,
+                            Address = new Address()
+                            {
+                                Country = "Country1",
+                                ZipCode = "123123",
+                                City = "City1",
+                                Street = "Street1",
+                                Number = "1"
+                            },
+                            Transaction = new TransactionInfo()
+                            {
+                                Date = DateTime.Parse("21-02-2016"),
+                                Price = 1200000,
+                                Commission = 20000
+                            }
+                        };
+                        new Home()
+                        {
+                            AgencyOffice = office1,
+                            Address = new Address()
+                            {
+                                Country = "Country2",
+                                ZipCode = "123123",
+                                City = "City2",
+                                Street = "Stret2",
+                                Number = "2"
+                            },
+                            Transaction = new TransactionInfo()
+                            {
+                                Date = DateTime.Parse("22-03-2017"),
+                                Price = 1000000,
+                                Commission = 12000
+                            }
+                        };
+
+                        var office2 = new Office()
                         {
                             Corporation = corporation,
                             Name = "REA #1 - Office 2",
@@ -52,6 +91,62 @@ namespace RealEstateAgencyFranchise
                                 ZipCode = "00110"
                             }
                         };
+
+                        new Home()
+                        {
+                            AgencyOffice = office2,
+                            Address = new Address()
+                            {
+                                Country = "Country3",
+                                ZipCode = "123123",
+                                City = "City3",
+                                Street = "Street3",
+                                Number = "3"
+                            },
+                            Transaction = new TransactionInfo()
+                            {
+                                Date = DateTime.Parse("01-01-2017"),
+                                Price = 900000,
+                                Commission = 30000
+                            }
+                        };
+                        new Home()
+                        {
+                            AgencyOffice = office2,
+                            Address = new Address()
+                            {
+                                Country = "Country4",
+                                ZipCode = "123123",
+                                City = "City4",
+                                Street = "Street4",
+                                Number = "4"
+                            },
+                            Transaction = new TransactionInfo()
+                            {
+                                Date = DateTime.Parse("13-02-2017"),
+                                Price = 968000,
+                                Commission = 7200
+                            }
+                        };
+                        new Home()
+                        {
+                            AgencyOffice = office2,
+                            Address = new Address()
+                            {
+                                Country = "Country5",
+                                ZipCode = "123123",
+                                City = "City5",
+                                Street = "Street5",
+                                Number = "5"
+                            },
+                            Transaction = new TransactionInfo()
+                            {
+                                Date = DateTime.Parse("25-06-2017"),
+                                Price = 1420000,
+                                Commission = 43000
+                            }
+                        };
+
                     }
                     else
                     {

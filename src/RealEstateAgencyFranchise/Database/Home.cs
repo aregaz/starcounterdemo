@@ -8,5 +8,7 @@ namespace RealEstateAgencyFranchise.Database
         public Address Address { get; set; }
 
         public TransactionInfo Transaction { get; set; }
+
+        public Office AgencyOffice { get; set; }
     }
 }
