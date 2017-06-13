@@ -3,9 +3,9 @@ using Starcounter;
 
 namespace RealEstateAgencyFranchise
 {
-    partial class CorporationJson : Json
+    partial class AgencyOfficeListJson : Json
     {
-        static CorporationJson()
+        static AgencyOfficeListJson()
         {
             DefaultTemplate.Offices.ElementType.InstanceType = typeof(AgencyOfficeJson);
         }

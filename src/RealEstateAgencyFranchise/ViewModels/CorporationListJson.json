@@ -1,0 +1,6 @@
+{
+  "Html": "/Views/CorporationList/CorporationListJson.html",
+  "Corporations": [ {} ],
+  "NewCorporationName$": "",
+  "AddNewCorporationTrigger$": ""
+}

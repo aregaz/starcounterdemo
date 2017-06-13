@@ -62,11 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgencyOfficeJson.json.cs">
+    <Compile Include="Controllers\CorporationListController.cs" />
+    <Compile Include="ViewModels\AgencyOfficeJson.json.cs">
       <DependentUpon>AgencyOfficeJson.json</DependentUpon>
     </Compile>
-    <Compile Include="CorporationJson.json.cs">
+    <Compile Include="ViewModels\AgencyOfficeListJson.json.cs">
+      <DependentUpon>AgencyOfficeListJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CorporationJson.json.cs">
       <DependentUpon>CorporationJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CorporationListJson.json.cs">
+      <DependentUpon>CorporationListJson.json</DependentUpon>
     </Compile>
     <Compile Include="Database\Address.cs" />
     <Compile Include="Database\Corporation.cs" />
@@ -77,20 +84,29 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypedJSON Include="CorporationJson.json">
+    <TypedJSON Include="ViewModels\AgencyOfficeListJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="wwwroot\RealEstateAgencyFranchise\CorporationJson.html" />
+    <Content Include="wwwroot\Views\CorporationDetails\AgencyOfficeListJson.html" />
     <Content Include="wwwroot\Content\styles.css" />
-    <None Include="wwwroot\RealEstateAgencyFranchise\AgencyOfficeJson.html" />
+    <TypedJSON Include="ViewModels\CorporationJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <None Include="wwwroot\Views\CorporationList\CorporationJson.html" />
+    <TypedJSON Include="ViewModels\CorporationListJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <None Include="wwwroot\Views\CorporationList\CorporationListJson.html" />
+    <None Include="wwwroot\Views\CorporationDetails\AgencyOfficeJson.html" />
   </ItemGroup>
   <ItemGroup>
-    <TypedJSON Include="AgencyOfficeJson.json">
+    <TypedJSON Include="ViewModels\AgencyOfficeJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(StarcounterBin)\Starcounter.MsBuild.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
