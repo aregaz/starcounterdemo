@@ -10,25 +10,20 @@ namespace RealEstateAgencyFranchise.Controllers
         {
             return Db.Scope(() =>
             {
-                Corporation corporation;
-
                 var corporations = Db.SQL<Corporation>("select c from Corporation c");
                 if (corporations == null || !corporations.Any())
                 {
                     // add seed corporation
-                    corporation = new Corporation()
+                    var corporation = new Corporation()
                     {
                         Name = "REA Corporation #1"
                     };
-                }
-                else
-                {
-                    corporation = corporations.First;
+                    corporations = Db.SQL<Corporation>("select c from Corporation c");
                 }
 
                 var json = new CorporationListJson
                 {
-                    Data = corporation
+                    Corporations = corporations
                 };
 
                 if (Session.Current == null)
