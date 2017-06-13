@@ -1,9 +1,13 @@
 ﻿<template>
     <template is="dom-bind">
-        <td>{{model.Name}}</td>
-        <td>{{model.SoldHomesCount}}</td>
-        <td>{{model.TotalCommission}}</td>
-        <td>{{model.AverageCommission}}</td>
-        <td>{{model.Trend}}</td>
+        <table>
+            <tr>
+                <td class="col-1">{{model.Name}}</td>
+                <td class="col-2 text-center">{{model.SoldHomesCount}}</td>
+                <td class="col-3 text-center">{{model.TotalCommission}}</td>
+                <td class="col-4 text-center">{{model.AverageCommission}}</td>
+                <td class="col-5 text-center">{{model.Trend}}</td>
+            </tr>
+        </table>
     </template>
 </template>

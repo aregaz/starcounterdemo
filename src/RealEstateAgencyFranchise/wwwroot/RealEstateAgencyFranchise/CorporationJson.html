@@ -11,19 +11,18 @@
 
             <table class="offices">
                 <tr>
-                    <th>Name</th>
-                    <th>Number of homes sold</th>
-                    <th>Total comission</th>
-                    <th>Average comission</th>
-                    <th>Trend</th>
+                    <th class="col-1">Name</th>
+                    <th class="col-2">Number of homes sold</th>
+                    <th class="col-3">Total comission</th>
+                    <th class="col-4">Average comission</th>
+                    <th class="col-5">Trend</th>
                 </tr>
+            </table>
 
                 <template is="dom-repeat" items="{{model.Offices}}">
-                    <tr>
-                        <starcounter-include partial="{{item}}"></starcounter-include>
-                    </tr>
+                    <starcounter-include partial="{{item}}"></starcounter-include>
                 </template>
-            </table>
+            
             <input value="{{model.NewOfficeName$::input}}"/>
             <button value="{{model.NewOfficeTrigger$::click}}" onmousedown="++this.value">Add new office</button>
         </p>
