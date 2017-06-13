@@ -19,9 +19,9 @@
                 </tr>
             </table>
 
-                <template is="dom-repeat" items="{{model.Offices}}">
-                    <starcounter-include partial="{{item}}"></starcounter-include>
-                </template>
+            <template is="dom-repeat" items="{{model.Offices}}">
+                <starcounter-include partial="{{item}}"></starcounter-include>
+            </template>
             
             <input value="{{model.NewOfficeName$::input}}"/>
             <button value="{{model.NewOfficeTrigger$::click}}" onmousedown="++this.value">Add new office</button>

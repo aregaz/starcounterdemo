@@ -1,4 +1,5 @@
 {
   "Html": "/Views/CorporationList/CorporationJson.html",
-  "Name": ""
+  "Name": "",
+  "CorporationId": 0
 }

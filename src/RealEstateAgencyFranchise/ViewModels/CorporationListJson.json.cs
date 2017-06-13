@@ -12,10 +12,12 @@ namespace RealEstateAgencyFranchise
 
         void Handle(Input.AddNewCorporationTrigger action)
         {
-            new Corporation()
+            var corporation = new Corporation()
             {
                 Name = this.NewCorporationName
             };
+
+            this.Corporations.Add(new CorporationJson() { Name = this.NewCorporationName });
 
             this.NewCorporationName = "";
         }

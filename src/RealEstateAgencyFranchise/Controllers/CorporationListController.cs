@@ -36,7 +36,7 @@ namespace RealEstateAgencyFranchise.Controllers
             });
         }
 
-        public Json GetCorporationDetails(long corporationObjectNo)
+        public Json GetCorporationDetails(ulong corporationObjectNo)
         {
             return Db.Scope(() =>
             {

@@ -2,10 +2,15 @@
 
 <template>
     <template is="dom-bind">
-        <template is="dom-repeat" items="{{model.Corporations}}">
-            <starcounter-include partial="{{item}}"></starcounter-include>
-        </template>
-        <input value="{{model.NewCorporationName$::input}}" />
-        <button value="{{model.AddNewCorporationTrigger$::click}}" onmousedown="++this.value">Add new corporation</button>
+        <p>
+            <h4>Franchises:</h4>
+            <template is="dom-repeat" items="{{model.Corporations$}}">
+                <starcounter-include partial="{{item}}"></starcounter-include>
+            </template>
+        </p>
+        <p>
+            <input value="{{model.NewCorporationName$::input}}" />
+            <button value="{{model.AddNewCorporationTrigger$::click}}" onmousedown="++this.value">Add new corporation</button>
+        </p>
     </template>
 </template>

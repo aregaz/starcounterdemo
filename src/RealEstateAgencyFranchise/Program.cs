@@ -21,7 +21,7 @@ namespace RealEstateAgencyFranchise
                 return _corporationListController.GetCorporationList();
             });
 
-            Handle.GET("/franchises/{?}/details", (long corporationObjectNo) =>
+            Handle.GET("/franchises/{?}/details", (ulong corporationObjectNo) =>
             {
                 return _corporationListController.GetCorporationDetails(corporationObjectNo);
             });
