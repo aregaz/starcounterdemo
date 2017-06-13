@@ -1,6 +1,6 @@
 {
   "Html": "/Views/CorporationDetails/AgencyOfficeListJson.html",
-  "Name": "",
+  "Name$": "",
   "Offices": [ {} ],
 
   "SaveTrigger$": 0,

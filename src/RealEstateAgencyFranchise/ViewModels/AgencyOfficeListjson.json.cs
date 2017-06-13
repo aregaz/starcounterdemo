@@ -26,6 +26,8 @@ namespace RealEstateAgencyFranchise
             };
 
             this.NewOfficeName = "";
+
+            Transaction.Commit();
         }
     }
 }

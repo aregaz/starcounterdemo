@@ -2,13 +2,26 @@
 
 <template>
     <template is="dom-bind">
-        <link rel="stylesheet" href="../Content/styles.css"/>
+        <link rel="stylesheet" href="/Content/styles.css"/>
         <p>
-            <h2>Real Estate Agency Franchise</h2>
+            <h3 class="CorporationName">{{model.Name$}}</h3>
         </p>
         <p>
-            <h3 class="CorporationName">{{model.Name}}</h3>
-
+            <div>
+                <div>Edit corporation name:</div>
+                <input value="{{model.Name$::input}}"/>
+                <button value="{{model.SaveTrigger$::click}}" onmousedown="++this.value">Save</button>
+            </div>
+            
+            <div>
+                <div>Add new office:</div>
+                <input value="{{model.NewOfficeName$::input}}" />
+                <button value="{{model.NewOfficeTrigger$::click}}" onmousedown="++this.value">Add new office</button>
+            </div>
+        </p>
+        <hr/>
+        <p>
+            <div>Existed offices:</div>
             <table class="offices">
                 <tr>
                     <th class="col-1">Name</th>
@@ -22,9 +35,6 @@
             <template is="dom-repeat" items="{{model.Offices}}">
                 <starcounter-include partial="{{item}}"></starcounter-include>
             </template>
-            
-            <input value="{{model.NewOfficeName$::input}}"/>
-            <button value="{{model.NewOfficeTrigger$::click}}" onmousedown="++this.value">Add new office</button>
         </p>
     </template>
 </template>

@@ -17,9 +17,14 @@ namespace RealEstateAgencyFranchise
                 Name = this.NewCorporationName
             };
 
-            this.Corporations.Add(new CorporationJson() { Name = this.NewCorporationName });
+            this.Corporations.Add(new CorporationJson()
+            {
+                Data = corporation
+            });
 
             this.NewCorporationName = "";
+
+            Transaction.Commit();
         }
     }
 }

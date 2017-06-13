@@ -9,7 +9,11 @@ namespace RealEstateAgencyFranchise.Database
     {
         public string Name { get; set; }
 
-        public List<Office> Offices => Db.SQL<Office>("select o from Office o").ToList();
+        public List<Office> Offices =>
+            Db.SQL<Office>(
+                "select o from Office o where o.Corporation = ?",
+                this)
+            .ToList();
 
         public ulong CorporationId =>
             Db.SQL<ulong>(
