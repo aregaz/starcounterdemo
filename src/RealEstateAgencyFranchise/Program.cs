@@ -9,21 +9,32 @@ namespace RealEstateAgencyFranchise
 {
     public class Program
     {
-        private static CorporationController _corporationListController = new CorporationController();
+        private static CorporationController _corporationController = new CorporationController();
+        private static OfficeController _officeController = new OfficeController();
 
         public static void Main()
         {
             Application.Current.Use(new HtmlFromJsonProvider());
             Application.Current.Use(new PartialToStandaloneHtmlProvider());
 
+            RegisterRoutes();
+        }
+
+        private static void RegisterRoutes()
+        {
             Handle.GET("/franchises", () =>
             {
-                return _corporationListController.GetAll();
+                return _corporationController.GetAll();
             });
 
             Handle.GET("/franchises/{?}/details", (ulong corporationObjectNo) =>
             {
-                return _corporationListController.Get(corporationObjectNo);
+                return _corporationController.Get(corporationObjectNo);
+            });
+
+            Handle.GET("/franchises/offices/{?}/details", (ulong officeObjectNo) =>
+            {
+                return _officeController.Get(officeObjectNo);
             });
         }
     }
