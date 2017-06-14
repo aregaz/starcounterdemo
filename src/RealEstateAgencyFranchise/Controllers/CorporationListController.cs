@@ -40,8 +40,6 @@ namespace RealEstateAgencyFranchise.Controllers
         {
             return Db.Scope(() =>
             {
-                Corporation corporation;
-
                 var corporations = Db.SQL<Corporation>(
                     "select c from Corporation c where c.ObjectNo = ?",
                     corporationObjectNo);
@@ -53,10 +51,8 @@ namespace RealEstateAgencyFranchise.Controllers
                         StatusDescription = "Corporation not found"
                     };
                 }
-                else
-                {
-                    corporation = corporations.First;
-                }
+
+                var corporation = corporations.First;
 
                 var json = new AgencyOfficeListJson
                 {
