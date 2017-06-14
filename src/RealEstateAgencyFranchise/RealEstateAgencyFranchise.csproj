@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CorporationController.cs" />
+    <Compile Include="Controllers\OfficeController.cs" />
+    <Compile Include="ViewModels\OfficeDeatilsJson.json.cs">
+      <DependentUpon>OfficeDeatilsJson.json</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\OfficeListItemJson.json.cs">
       <DependentUpon>OfficeListItemJson.json</DependentUpon>
@@ -93,6 +96,7 @@
     <TypedJSON Include="ViewModels\OfficeDeatilsJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
+    <None Include="wwwroot\Views\OfficeDetails\OfficeDetailsJson.html" />
     <Content Include="wwwroot\Views\OfficeList\OfficeListJson.html" />
     <Content Include="wwwroot\Content\styles.css" />
     <TypedJSON Include="ViewModels\CorporationListItemJson.json">
