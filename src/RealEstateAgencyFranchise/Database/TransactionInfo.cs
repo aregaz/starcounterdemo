@@ -11,5 +11,7 @@ namespace RealEstateAgencyFranchise.Database
         public double Price { get; set; }
 
         public double Commission { get; set; }
+
+        public Home AssociatedHome { get; set; }
     }
 }

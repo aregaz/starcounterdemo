@@ -11,6 +11,7 @@ namespace RealEstateAgencyFranchise
     {
         private static CorporationController _corporationController = new CorporationController();
         private static OfficeController _officeController = new OfficeController();
+        private static HomeController _homeController = new HomeController();
 
         public static void Main()
         {
@@ -35,6 +36,11 @@ namespace RealEstateAgencyFranchise
             Handle.GET("/franchises/offices/{?}/details", (ulong officeObjectNo) =>
             {
                 return _officeController.Get(officeObjectNo);
+            });
+
+            Handle.GET("/franchises/homes/{?}/details", (ulong homeObjectNo) =>
+            {
+                return _homeController.Get(homeObjectNo);
             });
         }
     }

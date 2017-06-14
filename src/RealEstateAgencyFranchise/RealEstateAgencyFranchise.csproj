@@ -63,7 +63,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CorporationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OfficeController.cs" />
+    <Compile Include="ViewModels\HomeDetails\HomeDetailsJson.json.cs">
+      <DependentUpon>HomeDetailsJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\OfficeDetails\HomeListItemJson.json.cs">
+      <DependentUpon>HomeListItemJson.json</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\OfficeDetails\OfficeAddressJson.json.cs">
       <DependentUpon>OfficeAddressJson.json</DependentUpon>
     </Compile>
@@ -108,9 +115,17 @@
     <TypedJSON Include="ViewModels\OfficeDetails\OfficeHomeListItemJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
+    <TypedJSON Include="ViewModels\OfficeDetails\HomeListItemJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <TypedJSON Include="ViewModels\HomeDetails\HomeDetailsJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
     <None Include="wwwroot\Views\OfficeDetails\OfficeDetailsJson.html" />
     <None Include="wwwroot\Views\OfficeDetails\OfficeAddressJson.html" />
     <None Include="wwwroot\Views\OfficeDetails\OfficeHomeListItemJson.html" />
+    <None Include="wwwroot\Views\OfficeDetails\HomeListItemJson.html" />
+    <None Include="wwwroot\Views\HomeDetails\HomeDetailsJson.html" />
     <Content Include="wwwroot\Views\OfficeList\OfficeListJson.html" />
     <Content Include="wwwroot\Content\styles.css" />
     <TypedJSON Include="ViewModels\CorporationList\CorporationListItemJson.json">
@@ -128,9 +143,7 @@
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\HomeDetails\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(StarcounterBin)\Starcounter.MsBuild.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

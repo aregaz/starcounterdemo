@@ -3,8 +3,11 @@
   "Name$": "",
   "CorporationId": 0,
 
-  "Address$": { },
+  "Address$": {},
   "Homes": [ {} ],
+
+  "NewHomeName$": "",
+
 
   "AddNewHomeTrigger$": 0
 }

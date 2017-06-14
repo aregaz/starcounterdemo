@@ -41,16 +41,16 @@ namespace RealEstateAgencyFranchise.Database
             Db.SQL<double>(
                 "SELECT SUM(t.Commission) " +
                 "FROM Home h " +
-                "JOIN TransactionInfo t ON h.Transaction = t " +
-                "WHERE h.AgencyOffice = ?",
+                "LEFT JOIN TransactionInfo t ON t.AssociatedHome = h " +
+                "WHERE h.AgencyOffice = ? AND t.Commission IS NOT NULL",
                 this)
-            .FirstOrDefault();
+            .First;
 
         public double AverageCommission =>
             SoldHomesCount == 0
                 ? 0
                 : TotalComission / SoldHomesCount;
 
-        public double Trend { get; set; }
+        public double Trend { get; set; } // don't know what this is
     }
 }
