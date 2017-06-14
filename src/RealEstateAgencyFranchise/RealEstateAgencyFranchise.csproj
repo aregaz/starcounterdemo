@@ -77,9 +77,6 @@
     <Compile Include="ViewModels\OfficeDetails\OfficeDetailsJson.json.cs">
       <DependentUpon>OfficeDetailsJson.json</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\OfficeDetails\OfficeHomeListItemJson.json.cs">
-      <DependentUpon>OfficeHomeListItemJson.json</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\OfficeList\OfficeListItemJson.json.cs">
       <DependentUpon>OfficeListItemJson.json</DependentUpon>
     </Compile>
@@ -112,9 +109,6 @@
     <TypedJSON Include="ViewModels\OfficeDetails\OfficeAddressJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
-    <TypedJSON Include="ViewModels\OfficeDetails\OfficeHomeListItemJson.json">
-      <Generator>MsBuild:Compile</Generator>
-    </TypedJSON>
     <TypedJSON Include="ViewModels\OfficeDetails\HomeListItemJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
@@ -123,7 +117,6 @@
     </TypedJSON>
     <None Include="wwwroot\Views\OfficeDetails\OfficeDetailsJson.html" />
     <None Include="wwwroot\Views\OfficeDetails\OfficeAddressJson.html" />
-    <None Include="wwwroot\Views\OfficeDetails\OfficeHomeListItemJson.html" />
     <None Include="wwwroot\Views\OfficeDetails\HomeListItemJson.html" />
     <None Include="wwwroot\Views\HomeDetails\HomeDetailsJson.html" />
     <Content Include="wwwroot\Views\OfficeList\OfficeListJson.html" />
