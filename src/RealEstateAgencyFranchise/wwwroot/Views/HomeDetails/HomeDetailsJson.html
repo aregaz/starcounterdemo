@@ -2,12 +2,17 @@
 
 <template>
     <template is="dom-bind">
+        <style>
+            @import url("/Content/styles.css");
+        </style>
         <nav>
-            <a href="/franchises/{{model.AgencyOfficeId$}}/details">Back to home list</a>
+            <a href="/franchises/offices/{{model.AgencyOfficeId$}}/details">Back to home list</a>
             <a href="/franchises">Back to top</a>
         </nav>
         <p>
             <h4>Home <span class="homeName">{{model.Name$}}</span> details</h4>
         </p>
+
+        <h6>Transaction info should be implemented here</h6>
     </template>
 </template>

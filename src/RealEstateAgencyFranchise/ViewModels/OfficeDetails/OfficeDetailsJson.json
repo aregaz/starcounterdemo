@@ -4,10 +4,10 @@
   "CorporationId": 0,
 
   "Address$": {},
-  "Homes": [ {} ],
+  "SoldHomes": [ {} ],
 
   "NewHomeName$": "",
 
-
+  "SaveOfficeTrigger$": 0,
   "AddNewHomeTrigger$": 0
 }

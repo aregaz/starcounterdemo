@@ -15,6 +15,9 @@
                 <span>Chane office name: </span>
                 <input value="{{model.Name$::input}}"/>
             </div>
+            <div>
+                <button value="{{model.SaveOfficeTrigger$::click}}" onmousedown="++this.value">Save all changes</button>
+            </div>
         </p>
         <hr />
         <p>
@@ -25,7 +28,7 @@
         <p>
             <div>
                 <h5>Homes</h5>
-                <template is="dom-repeat" items="{{model.Homes}}">
+                <template is="dom-repeat" items="{{model.SoldHomes}}">
                     <starcounter-include partial="{{item}}"></starcounter-include>
                 </template>
             </div>

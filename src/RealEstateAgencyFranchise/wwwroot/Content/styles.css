@@ -34,7 +34,7 @@ table.offices th {
     text-align: center;
 }
 
-.officeName {
+.officeName, .homeName {
     color: red;
     font-weight: 600;
 }

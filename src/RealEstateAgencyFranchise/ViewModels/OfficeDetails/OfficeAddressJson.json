@@ -5,7 +5,5 @@
   "ZipCode$": "",
   "City$": "",
   "Country$": "",
-  "FullAddress": "",
-
-  "SaveAddressTrigger$": 0
+  "FullAddress": ""
 }

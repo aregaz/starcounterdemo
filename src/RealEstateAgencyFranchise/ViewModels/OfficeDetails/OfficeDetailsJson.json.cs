@@ -9,7 +9,7 @@ namespace RealEstateAgencyFranchise.ViewModels
         static OfficeDetailsJson()
         {
             DefaultTemplate.Address.InstanceType = typeof(OfficeAddressJson);
-            DefaultTemplate.Homes.ElementType.InstanceType = typeof(HomeListItemJson);
+            DefaultTemplate.SoldHomes.ElementType.InstanceType = typeof(HomeListItemJson);
         }
 
         void Handle(Input.AddNewHomeTrigger action)
@@ -20,12 +20,18 @@ namespace RealEstateAgencyFranchise.ViewModels
                 Name = this.NewHomeName
             };
 
-            this.Homes.Add(new HomeListItemJson()
+            this.SoldHomes.Add(new HomeListItemJson()
             {
                 Data = newHome
             });
 
             this.NewHomeName = "";
+
+            Transaction.Commit();
+        }
+
+        void Handle(Input.SaveOfficeTrigger action)
+        {
             Transaction.Commit();
         }
     }
