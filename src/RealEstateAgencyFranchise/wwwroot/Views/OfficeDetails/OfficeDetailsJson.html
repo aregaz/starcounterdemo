@@ -2,16 +2,23 @@
 
 <template>
     <template is="dom-bind">
+        <style>
+            @import url("/Content/styles.css");
+        </style>
         <div>
             <a href="/franchises/{{model.CorporationId}}/details">Back to office list</a>
         </div>
         <p>
-            <h4>Office deatils</h4>
-            <h5>{{model.Name}}</h5>
+            <h4>Office <span class="officeName">{{model.Name$}}</span> deatils</h4>
+            <div>
+                <span>Chane office name: </span>
+                <input value="{{model.Name$::input}}"/>
+            </div>
         </p>
         <hr />
         <p>
-            <starcounter-include partial="{{model.Address}}"></starcounter-include>
+            <h5>Address</h5>
+            <starcounter-include partial="{{model.Address$}}"></starcounter-include>
         </p>
         <hr />
         <p>

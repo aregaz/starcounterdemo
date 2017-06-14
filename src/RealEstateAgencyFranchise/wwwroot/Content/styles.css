@@ -33,3 +33,8 @@ table.offices th {
 .text-center {
     text-align: center;
 }
+
+.officeName {
+    color: red;
+    font-weight: 600;
+}

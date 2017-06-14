@@ -5,7 +5,9 @@ namespace RealEstateAgencyFranchise.Database
     [Database]
     public class Home
     {
-        public Address Address { get; set; }
+        // task is simplified due to insufficient time - home does not have an address, only name
+        //public Address Address { get; set; }
+        public string Name { get; set; }
 
         public TransactionInfo Transaction { get; set; }
 
