@@ -1,4 +1,5 @@
 ﻿using RealEstateAgencyFranchise.Database;
+using RealEstateAgencyFranchise.ViewModels;
 using Starcounter;
 using System.Linq;
 
@@ -24,7 +25,7 @@ namespace RealEstateAgencyFranchise.Controllers
 
                 var office = offices.First;
 
-                var json = new OfficeListJson
+                var json = new OfficeDetailsJson
                 {
                     Data = office
                 };
