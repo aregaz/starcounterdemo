@@ -9,6 +9,12 @@ namespace RealEstateAgencyFranchise.Database
     {
         public string Name { get; set; }
 
+        public ulong OfficeId =>
+            Db.SQL<ulong>(
+                "select o.ObjectNo from Office o where o = ?",
+                this)
+            .First;
+
         public Corporation Corporation { get; set; }
 
         public Address Address { get; set; }
@@ -23,8 +29,7 @@ namespace RealEstateAgencyFranchise.Database
             Db.SQL<long>(
                 "SELECT COUNT(h) FROM Home h WHERE h.AgencyOffice = ?",
                 this)
-            .First; // why does not work?
-                    //SoldHomes.Count;
+            .First;
 
         public double TotalComission =>
             Db.SQL<double>(

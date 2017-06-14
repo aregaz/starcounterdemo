@@ -1,7 +1,8 @@
 {
   "Html": "/Views/OfficeList/OfficeListItemJson.html",
   "Name": "",
-  "SoldHomesCount": 0.0,
+  "OfficeId": 0,
+  "SoldHomesCount": 0,
   "TotalCommission": 0.0,
   "AverageCommission": 0.0,
   "Trend": 0

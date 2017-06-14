@@ -2,7 +2,7 @@
     <template is="dom-bind">
         <table>
             <tr>
-                <td class="col-1">{{model.Name}}</td>
+                <td class="col-1"><a href="/franchises/offices/{{model.OfficeId}}">{{model.Name}}</a></td>
                 <td class="col-2 text-center">{{model.SoldHomesCount}}</td>
                 <td class="col-3 text-center">{{model.TotalCommission}}</td>
                 <td class="col-4 text-center">{{model.AverageCommission}}</td>
