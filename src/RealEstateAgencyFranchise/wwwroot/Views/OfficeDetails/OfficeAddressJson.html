@@ -1,0 +1,32 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <div>
+            <span>Street: </span>
+            <input value="{{model.Street$::input}}" />
+        </div>
+        <div>
+            <span>Number: </span>
+            <input value="{{model.Number$::input}}" />
+        </div>
+        <div>
+            <span>Zip code: </span>
+            <input value="{{model.ZipCode$::input}}" />
+        </div>
+        <div>
+            <span>City: </span>
+            <input value="{{model.City$::input}}" />
+        </div>
+        <div>
+            <span>Country: </span>
+            <input value="{{model.Country$::input}}" />
+        </div>
+        <div>
+            <span>{{model.FullAddress}}</span>
+        </div>
+        <div>
+            <button value="{{model.SaveAddressTrigger$::click}}" onmousedown="++this.value">Save</button>
+        </div>
+    </template>
+</template>

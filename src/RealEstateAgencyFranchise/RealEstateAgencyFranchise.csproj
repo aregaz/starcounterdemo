@@ -64,19 +64,25 @@
   <ItemGroup>
     <Compile Include="Controllers\CorporationController.cs" />
     <Compile Include="Controllers\OfficeController.cs" />
-    <Compile Include="ViewModels\OfficeDeatilsJson.json.cs">
-      <DependentUpon>OfficeDeatilsJson.json</DependentUpon>
+    <Compile Include="ViewModels\OfficeDetails\OfficeAddressJson.json.cs">
+      <DependentUpon>OfficeAddressJson.json</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\OfficeListItemJson.json.cs">
+    <Compile Include="ViewModels\OfficeDetails\OfficeDetailsJson.json.cs">
+      <DependentUpon>OfficeDetailsJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\OfficeDetails\OfficeHomeListItemJson.json.cs">
+      <DependentUpon>OfficeHomeListItemJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\OfficeList\OfficeListItemJson.json.cs">
       <DependentUpon>OfficeListItemJson.json</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\OfficeListJson.json.cs">
+    <Compile Include="ViewModels\OfficeList\OfficeListJson.json.cs">
       <DependentUpon>OfficeListJson.json</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\CorporationListItemJson.json.cs">
+    <Compile Include="ViewModels\CorporationList\CorporationListItemJson.json.cs">
       <DependentUpon>CorporationListItemJson.json</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\CorporationListJson.json.cs">
+    <Compile Include="ViewModels\CorporationList\CorporationListJson.json.cs">
       <DependentUpon>CorporationListJson.json</DependentUpon>
     </Compile>
     <Compile Include="Database\Address.cs" />
@@ -88,33 +94,43 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypedJSON Include="ViewModels\OfficeListJson.json">
+    <TypedJSON Include="ViewModels\OfficeList\OfficeListJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
   </ItemGroup>
   <ItemGroup>
-    <TypedJSON Include="ViewModels\OfficeDeatilsJson.json">
+    <TypedJSON Include="ViewModels\OfficeDetails\OfficeDetailsJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <TypedJSON Include="ViewModels\OfficeDetails\OfficeAddressJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <TypedJSON Include="ViewModels\OfficeDetails\OfficeHomeListItemJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
     <None Include="wwwroot\Views\OfficeDetails\OfficeDetailsJson.html" />
+    <None Include="wwwroot\Views\OfficeDetails\OfficeAddressJson.html" />
+    <None Include="wwwroot\Views\OfficeDetails\OfficeHomeListItemJson.html" />
     <Content Include="wwwroot\Views\OfficeList\OfficeListJson.html" />
     <Content Include="wwwroot\Content\styles.css" />
-    <TypedJSON Include="ViewModels\CorporationListItemJson.json">
+    <TypedJSON Include="ViewModels\CorporationList\CorporationListItemJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
     <None Include="wwwroot\Views\CorporationList\CorporationListItemJson.html" />
-    <TypedJSON Include="ViewModels\CorporationListJson.json">
+    <TypedJSON Include="ViewModels\CorporationList\CorporationListJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
     <None Include="wwwroot\Views\CorporationList\CorporationListJson.html" />
     <None Include="wwwroot\Views\OfficeList\OfficeListItemJson.html" />
   </ItemGroup>
   <ItemGroup>
-    <TypedJSON Include="ViewModels\OfficeListItemJson.json">
+    <TypedJSON Include="ViewModels\OfficeList\OfficeListItemJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModels\HomeDetails\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(StarcounterBin)\Starcounter.MsBuild.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

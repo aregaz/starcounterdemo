@@ -1,0 +1,11 @@
+{
+  "Html": "/Views/OfficeDetails/OfficeAddressJson.html",
+  "Street$": "",
+  "Number$": "",
+  "ZipCode$": "",
+  "City$": "",
+  "Country$": "",
+  "FullAddress": "",
+
+  "SaveAddressTrigger$": 0
+}
