@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CorporationListController.cs" />
+    <Compile Include="Controllers\CorporationController.cs" />
     <Compile Include="ViewModels\AgencyOfficeJson.json.cs">
       <DependentUpon>AgencyOfficeJson.json</DependentUpon>
     </Compile>

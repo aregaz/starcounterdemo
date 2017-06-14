@@ -9,7 +9,7 @@ namespace RealEstateAgencyFranchise
 {
     public class Program
     {
-        private static CorporationListController _corporationListController = new CorporationListController();
+        private static CorporationController _corporationListController = new CorporationController();
 
         public static void Main()
         {
@@ -18,12 +18,12 @@ namespace RealEstateAgencyFranchise
 
             Handle.GET("/franchises", () =>
             {
-                return _corporationListController.GetCorporationList();
+                return _corporationListController.GetAll();
             });
 
             Handle.GET("/franchises/{?}/details", (ulong corporationObjectNo) =>
             {
-                return _corporationListController.GetCorporationDetails(corporationObjectNo);
+                return _corporationListController.Get(corporationObjectNo);
             });
         }
     }

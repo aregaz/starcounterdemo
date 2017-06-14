@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace RealEstateAgencyFranchise.Controllers
 {
-    internal class CorporationListController
+    internal class CorporationController
     {
-        public Json GetCorporationList()
+        public Json GetAll()
         {
             return Db.Scope(() =>
             {
@@ -36,7 +36,7 @@ namespace RealEstateAgencyFranchise.Controllers
             });
         }
 
-        public Json GetCorporationDetails(ulong corporationObjectNo)
+        public Json Get(ulong corporationObjectNo)
         {
             return Db.Scope(() =>
             {
