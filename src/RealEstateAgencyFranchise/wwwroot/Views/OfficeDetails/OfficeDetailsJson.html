@@ -5,9 +5,10 @@
         <style>
             @import url("/Content/styles.css");
         </style>
-        <div>
+        <nav>
             <a href="/franchises/{{model.CorporationId}}/details">Back to office list</a>
-        </div>
+            <a href="/franchises">Back to top</a>
+        </nav>
         <p>
             <h4>Office <span class="officeName">{{model.Name$}}</span> deatils</h4>
             <div>
@@ -22,10 +23,17 @@
         </p>
         <hr />
         <p>
-            <h5>Homes</h5>
-            <template is="dom-repeat" items="{{model.Homes}}">
-                <starcounter-include partial="{{item}}"></starcounter-include>
-            </template>
+            <div>
+                <h5>Homes</h5>
+                <template is="dom-repeat" items="{{model.Homes}}">
+                    <starcounter-include partial="{{item}}"></starcounter-include>
+                </template>
+            </div>
+            <div>
+                <h5>Add new home</h5>
+                <input value="{{model.NewHomeName$::input}}" />
+                <button value="{{model.AddNewHomeTrigger$::click}}" onmousedown="++this.value">Add new home</button>
+            </div>
         </p>
     </template>
 </template>

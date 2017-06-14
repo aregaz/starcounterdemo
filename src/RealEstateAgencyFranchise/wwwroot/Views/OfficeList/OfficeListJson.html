@@ -5,12 +5,15 @@
         <style>
             @import url("/Content/styles.css");
         </style>
+        <nav>
+            <a href="/franchises">Back to top</a>
+        </nav>
         <p>
-            <h3 class="CorporationName">{{model.Name$}}</h3>
+            <h4>Franchise <span class="CorporationName">{{model.Name$}}</span> details</h4>
         </p>
         <p>
             <div>
-                <div>Edit corporation name:</div>
+                <div>Edit franchise name:</div>
                 <input value="{{model.Name$::input}}"/>
                 <button value="{{model.SaveTrigger$::click}}" onmousedown="++this.value">Save</button>
             </div>
