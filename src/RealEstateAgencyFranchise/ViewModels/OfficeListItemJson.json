@@ -1,5 +1,5 @@
 {
-  "Html": "/Views/CorporationDetails/AgencyOfficeListJson.html",
+  "Html": "/Views/OfficeList/OfficeListItemJson.html",
   "Name": "",
   "SoldHomesCount": 0.0,
   "TotalCommission": 0.0,

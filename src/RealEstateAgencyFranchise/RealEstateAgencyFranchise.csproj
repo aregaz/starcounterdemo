@@ -63,14 +63,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CorporationController.cs" />
-    <Compile Include="ViewModels\AgencyOfficeJson.json.cs">
-      <DependentUpon>AgencyOfficeJson.json</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\AgencyOfficeListJson.json.cs">
-      <DependentUpon>AgencyOfficeListJson.json</DependentUpon>
+    <Compile Include="ViewModels\OfficeListItemJson.json.cs">
+      <DependentUpon>OfficeListItemJson.json</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\CorporationJson.json.cs">
-      <DependentUpon>CorporationJson.json</DependentUpon>
+    <Compile Include="ViewModels\OfficeListJson.json.cs">
+      <DependentUpon>OfficeListJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CorporationListItemJson.json.cs">
+      <DependentUpon>CorporationListItemJson.json</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\CorporationListJson.json.cs">
       <DependentUpon>CorporationListJson.json</DependentUpon>
@@ -84,25 +85,28 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypedJSON Include="ViewModels\AgencyOfficeListJson.json">
+    <TypedJSON Include="ViewModels\OfficeListJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="wwwroot\Views\CorporationDetails\AgencyOfficeListJson.html" />
-    <Content Include="wwwroot\Content\styles.css" />
-    <TypedJSON Include="ViewModels\CorporationJson.json">
+    <TypedJSON Include="ViewModels\OfficeDeatilsJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
-    <None Include="wwwroot\Views\CorporationList\CorporationJson.html" />
+    <Content Include="wwwroot\Views\OfficeList\OfficeListJson.html" />
+    <Content Include="wwwroot\Content\styles.css" />
+    <TypedJSON Include="ViewModels\CorporationListItemJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <None Include="wwwroot\Views\CorporationList\CorporationListItemJson.html" />
     <TypedJSON Include="ViewModels\CorporationListJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
     <None Include="wwwroot\Views\CorporationList\CorporationListJson.html" />
-    <None Include="wwwroot\Views\CorporationDetails\AgencyOfficeJson.html" />
+    <None Include="wwwroot\Views\OfficeList\OfficeListItemJson.html" />
   </ItemGroup>
   <ItemGroup>
-    <TypedJSON Include="ViewModels\AgencyOfficeJson.json">
+    <TypedJSON Include="ViewModels\OfficeListItemJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
   </ItemGroup>

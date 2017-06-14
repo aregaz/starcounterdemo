@@ -1,5 +1,5 @@
 {
-  "Html": "/Views/CorporationDetails/AgencyOfficeListJson.html",
+  "Html": "/Views/OfficeList/OfficeListJson.html",
   "Name$": "",
   "Offices": [ {} ],
 

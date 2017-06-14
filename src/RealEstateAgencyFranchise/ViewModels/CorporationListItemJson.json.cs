@@ -2,7 +2,7 @@ using Starcounter;
 
 namespace RealEstateAgencyFranchise
 {
-    partial class CorporationJson : Json
+    partial class CorporationListItemJson : Json
     {
     }
 }

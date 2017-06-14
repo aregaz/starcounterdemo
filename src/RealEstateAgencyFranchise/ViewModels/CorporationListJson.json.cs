@@ -7,7 +7,7 @@ namespace RealEstateAgencyFranchise
     {
         static CorporationListJson()
         {
-            DefaultTemplate.Corporations.ElementType.InstanceType = typeof(CorporationJson);
+            DefaultTemplate.Corporations.ElementType.InstanceType = typeof(CorporationListItemJson);
         }
 
         void Handle(Input.AddNewCorporationTrigger action)
@@ -17,7 +17,7 @@ namespace RealEstateAgencyFranchise
                 Name = this.NewCorporationName
             };
 
-            this.Corporations.Add(new CorporationJson()
+            this.Corporations.Add(new CorporationListItemJson()
             {
                 Data = corporation
             });

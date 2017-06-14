@@ -54,7 +54,7 @@ namespace RealEstateAgencyFranchise.Controllers
 
                 var corporation = corporations.First;
 
-                var json = new AgencyOfficeListJson
+                var json = new OfficeListJson
                 {
                     Data = corporation
                 };

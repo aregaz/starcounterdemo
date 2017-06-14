@@ -3,11 +3,11 @@ using Starcounter;
 
 namespace RealEstateAgencyFranchise
 {
-    partial class AgencyOfficeListJson : Json
+    partial class OfficeListJson : Json
     {
-        static AgencyOfficeListJson()
+        static OfficeListJson()
         {
-            DefaultTemplate.Offices.ElementType.InstanceType = typeof(AgencyOfficeJson);
+            DefaultTemplate.Offices.ElementType.InstanceType = typeof(OfficeListItemJson);
         }
 
         void Handle(Input.SaveTrigger action)
