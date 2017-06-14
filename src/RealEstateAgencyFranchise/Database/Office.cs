@@ -17,6 +17,12 @@ namespace RealEstateAgencyFranchise.Database
 
         public Corporation Corporation { get; set; }
 
+        public ulong CorporationId =>
+            Db.SQL<ulong>(
+                "select c.ObjectNo from Corporation c where c = ?",
+                this.Corporation)
+            .First;
+
         public Address Address { get; set; }
 
         public List<Home> SoldHomes =>

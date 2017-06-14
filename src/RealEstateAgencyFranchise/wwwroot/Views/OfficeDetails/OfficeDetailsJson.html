@@ -2,9 +2,23 @@
 
 <template>
     <template is="dom-bind">
+        <div>
+            <a href="/franchises/{{model.CorporationId}}/details">Back to office list</a>
+        </div>
         <p>
             <h4>Office deatils</h4>
             <h5>{{model.Name}}</h5>
+        </p>
+        <hr />
+        <p>
+            <starcounter-include partial="{{model.Address}}"></starcounter-include>
+        </p>
+        <hr />
+        <p>
+            <h5>Homes</h5>
+            <template is="dom-repeat" items="{{model.Homes}}">
+                <starcounter-include partial="{{item}}"></starcounter-include>
+            </template>
         </p>
     </template>
 </template>
